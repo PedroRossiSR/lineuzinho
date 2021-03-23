@@ -3,6 +3,7 @@ import os
 from greeter import Greeter
 from forwarder import Forwarder
 from beaner import Beaner
+import time
 
 class Lineuzinho:
     def __init__(self):
@@ -42,6 +43,15 @@ class Lineuzinho:
     def getBeanFlavor(self, update, context):
         beanFlavor = self.beaner.getFlavor()
         context.bot.send_message(chat_id=update.effective_chat.id, text=beanFlavor)
+        
+    def rojao(self, update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="FIUUUUU\n")
+        sleep(2)
+        context.bot.send_message(chat_id=update.effective_chat.id, text="POWWW POWW\n")
+        sleep(2)
+        context.bot.send_message(chat_id=update.effective_chat.id, text="pow pow pow POW POW\n")
+        sleep(8)
+        context.bot.send_message(chat_id=update.effective_chat.id, text="PAAAAAAAAAAAAW\n")
 
     def help(self, update, context):
         update.message.reply_text("digita \"/\" no teclado pra dar uma olhada nos comandos disponíveis :V")
